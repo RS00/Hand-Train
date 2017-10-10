@@ -1,6 +1,6 @@
 # Requirements Document 
 ## 1 Introduction
-Cross-platform application for view of train routes.
+Cross-platform mobile application for view of train routes.
 ## 2 User Requirements
 ### 2.1 Software Interfaces
 #### Used technologies
