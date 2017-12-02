@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandTrain.Android", "HandTrain\HandTrain.Android\HandTrain.Android.csproj", "{C12814BD-6E9E-494E-B075-09645E331451}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HandTrain", "HandTrain\HandTrain\HandTrain.shproj", "{1C9F32FF-9AC6-44C7-A232-CF9D1EEEB720}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		HandTrain\HandTrain\HandTrain.projitems*{1c9f32ff-9ac6-44c7-a232-cf9d1eeeb720}*SharedItemsImports = 13
+		HandTrain\HandTrain\HandTrain.projitems*{c12814bd-6e9e-494e-b075-09645e331451}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C12814BD-6E9E-494E-B075-09645E331451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12814BD-6E9E-494E-B075-09645E331451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12814BD-6E9E-494E-B075-09645E331451}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C12814BD-6E9E-494E-B075-09645E331451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12814BD-6E9E-494E-B075-09645E331451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C12814BD-6E9E-494E-B075-09645E331451}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D501F76-DDF6-42D7-B7CF-134C4614AEA5}
+	EndGlobalSection
+EndGlobal
