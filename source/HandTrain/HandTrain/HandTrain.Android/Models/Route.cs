@@ -16,9 +16,10 @@ namespace HandTrain.Droid.Models
     {
         public string FirstCity { get; set; }
         public string SecondCity { get; set; }
-        public DateTime DataTime { get; set; }
-        public DateTime ArrivalTime { get; set; }
-        public DateTime DepartureЕime{ get; set; }
+        public string NameOfRoute { get; set; }
+        public string DataTime { get; set; }
+        public string ArrivalTime { get; set; }
+        public string DepartureЕime{ get; set; }
         public string TimeToWay { get; set; }
         public string Price { get; set; }
         public string AvalibleTickets { get; set; }

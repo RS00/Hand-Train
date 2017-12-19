@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Text;
-using Android.Views;
-using Android.Widget;
 using HandTrain.Droid.Models;
 using HtmlAgilityPack;
-using Javax.Crypto.Interfaces;
 
 namespace HandTrain.Droid.Service
 {
@@ -22,14 +11,30 @@ namespace HandTrain.Droid.Service
         {
             HtmlDocument htmlSnippet = new HtmlDocument();
             htmlSnippet.LoadHtml(html);
-
-            var a = htmlSnippet.DocumentNode.Descendants("tr")
-                .Select(y => y.Descendants()
-                    .Where(x => x.Attributes["class"].Value == "w_places"))
-                .ToList();
+            var routes = new List<Route>();
+            var routeHtmlelements = htmlSnippet.DocumentNode.Descendants("tr").ToList();
+            if(routeHtmlelements != null)
+            {
+                routeHtmlelements.Remove(routeHtmlelements[0]);
+                foreach (var item in routeHtmlelements)
+                {
+                    routes.Add(new Route
+                    {
+                        NameOfRoute = item.ChildNodes.Descendants(".train_name > a").ToString(),
+                        ArrivalTime = item.ChildNodes.Descendants(".train_start-time").ToString(),
+                        DepartureЕime = item.ChildNodes.Descendants(".train_end-time").ToString(),
+                        TimeToWay = item.ChildNodes.Descendants(".train_time-total").ToString(),
+                        Price = item.ChildNodes.Descendants(".denom_after").ToString(),
+                        AvalibleTickets = item.ChildNodes.Descendants(".train_place > a").ToString()
+                    });
+                }
+            }
+            else
+            {
+                return null;
+            }
             
-
-            return null;
+            return routes;
         }
 
     }
